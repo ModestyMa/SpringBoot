@@ -1,0 +1,13 @@
+SpringBoot项目中通过可以设置Json转换器,
+方法:
+1.web的pom中去除默认的jackson,将fastjson或Gson加入后,增加MyJsonConfig(@Configure和@Bean实现)
+2.springBoot中继承webMvcConfigure来对MVC进行基础配置,通过继承该类后设置额外JSON解析	(converters加入自定义的FastJsonHttpMessageConverter)
+
+静态资源默认访问策略
+分别可以在/META-INF/resources /resources /static /public  优先级依次降低   例子:若static下被删除,则在public去找
+自定义策略方法:
+在application.yml中增加,或继承WebMVCConfigurer实现addResourceHandlers
+
+
+
+
