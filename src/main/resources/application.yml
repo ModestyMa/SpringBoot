@@ -1,0 +1,10 @@
+server:
+  port:  8082
+  servlet:  
+    contxt-path:  /SpringBootApplication
+    session:
+      timeout:  30m
+  tomcat:  
+    uri-encoding:  utf-8
+  error:
+    path:  /error
