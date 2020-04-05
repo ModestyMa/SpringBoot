@@ -8,14 +8,29 @@ server:
       enabled:  true                     #文件上传支持
       file-size-threshold:  0            #写入磁盘阈值
       location:  D:\\TEMP                #临时保存位置
-      max-file-size:  10MB               #单文件最大
+      max-file-size:  1K                #单文件最大
       max-request-size:  10MB            #多文件总大小
       resolve-lazily:  false             #文件是否延迟解析
   tomcat:  
     uri-encoding:  utf-8
   error:
     path:  /error
-#spring:
+spring:
+  devtools:
+    restart:
+      enabled: true
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://cdb-86g91nd2.cd.tencentcdb.com:10059/test?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    hikari: # springboot 2.0 整合了hikari ,据说这是目前性能最好的java数据库连接池
+      username: root
+      password: Fuckmql19960604
+  jpa:
+    hibernate:
+      ddl-auto: update  # 第一次建表create  后面用update，要不然每次重启都会新建表
+    show-sql: true
+
+
 #  mvc:
 #     static-path-pattern:  /static/**    #过滤规则
 #  resources:

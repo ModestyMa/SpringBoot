@@ -22,4 +22,5 @@ public class SpringStartApplication {
  * @ComponentScan	将配置进行扫描进去	(扫描@Service,@Repository,@Component,@Controller,@RestController,@Configure)
  * @Configure		表明这是一个配置类
  * @SpringBootApplication 代替 @EnableAutoConfiguration		@ComponentScan	@Configure
+ * @EnableAutoConfiguration(exclude={__.class})  去除某个自动化诶之
  */
