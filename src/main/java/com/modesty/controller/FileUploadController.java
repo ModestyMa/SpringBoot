@@ -31,7 +31,7 @@ public class FileUploadController {
 		String realPath = req.getSession().getServletContext().getRealPath("/uploadFile/");
 		String format = sdf.format(new Date());
 		File folder = new File(realPath + format);
-		if(!folder.isDirectory())	folder.mkdirs();
+		if(!folder.isDirectory())	{folder.mkdirs();}
 		String oldName = uploadFile.getOriginalFilename();
 		String newName = UUID.randomUUID().toString() + oldName.substring(oldName.lastIndexOf("."),oldName.length());
 		
