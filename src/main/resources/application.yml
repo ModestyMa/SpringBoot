@@ -25,13 +25,47 @@ spring:
     hikari: # springboot 2.0 整合了hikari ,据说这是目前性能最好的java数据库连接池
       username: root
       password: Fuckmql19960604
+  activemq:
+    broker-url: tcp://119.3.167.2:61616
+    in-memory: false
+    user: admin
+    password: admin
+    packages:
+      trust-all: true
   jpa:
     hibernate:
       ddl-auto: update  # 第一次建表create  后面用update，要不然每次重启都会新建表
     show-sql: true
+  redis:
+    database: 0
+    host: 119.3.167.2
+    port: 6379
+    password: fuckmql19960604
+    jedis:
+      pool:
+        max-active: 8
+        max-idle: 8
+        max-wait: -1ms
+        min-idle: 0
+  security:
+    user:
+      name:  modesty
+      password: 1234
+      roles: admin
+  batch:
+    job:
+      # 默认自动执行定义的Job(true)，改为false，需要jobLaucher.run执行
+      enabled: false
+    # spring batch在数据库里面创建默认的数据表，如果不是always则会提示相关表不存在
+    initialize-schema: always
+    # 设置batch表的前缀
+    table-prefix: csv_batch
+
 #  mvc:
 #     static-path-pattern:  /static/**    过滤规则
 #  resources:
 #     static-locations:  /static/         静态资源位置
 #  spring.devtools.restart.exclude=/**    默认的不触发重启目录
 #  spring.devtools.restart.additional-path=src/main/resources/static    添加重启项目
+# redis  max-active最大连接数   max-idle min-idle最大/最小空闲数   max-wait最大阻塞等待时间   -1表示无限制
+#

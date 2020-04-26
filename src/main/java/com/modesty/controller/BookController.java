@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -24,6 +25,7 @@ import io.swagger.annotations.ApiOperation;
 
 @RestController
 @Api("thymeleaf测试程序")
+@RequestMapping("/book")
 public class BookController {
 	@GetMapping("/books")
 	@ApiOperation(value = "测试books",notes="测试thymeleaf和lombak使用")

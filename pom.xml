@@ -41,13 +41,51 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-aop</artifactId>
 		</dependency>
-		
+
+		<!-- SpringSecurity -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
+		</dependency>
+
+		<!-- Spring批处理 -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-batch</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-jdbc</artifactId>
+		</dependency>
+
+		<!-- 应用监控 -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
+		<!-- <dependency> -->
+		<!-- <groupId>de.codecentric</groupId> -->
+		<!-- <artifactId>spring-boot-admin-server</artifactId> -->
+		<!-- <version>1.5.7</version> -->
+		<!-- <dependency> -->
+		<!-- <groupId>de.codecentric</groupId> -->
+		<!-- <artifactId>spring-boot-admin-server-ui</artifactId> -->
+		<!-- <version>1.5.7</version> -->
+		<!-- </dependency> -->
+
+		<!--Validation -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-validation</artifactId>
+		</dependency>
+
 		<!--RestFul -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-rest</artifactId>
 		</dependency>
-		
+
 
 		<!-- 添加 Undertow 容器 -->
 		<dependency>
@@ -79,12 +117,40 @@
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
 		</dependency>
 
+		<!--redis -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-redis</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-pool2</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>redis.clients</groupId>
+			<artifactId>jedis</artifactId>
+		</dependency>
+
+		<!-- AMQ / 消息队列连接池 -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-activemq</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.activemq</groupId>
+			<artifactId>activemq-pool</artifactId>
+		</dependency>
+
+		<!-- RabbitMQ -->
+
 		<!-- mysql -->
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
 		</dependency>
-		
+
 		<!-- druid 连接池 -->
 		<dependency>
 			<groupId>com.alibaba</groupId>
@@ -98,6 +164,12 @@
 			<artifactId>spring-boot-devtools</artifactId>
 			<optional>true</optional>
 			<scope>true</scope>
+		</dependency>
+
+		<!-- Quartz -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-quartz</artifactId>
 		</dependency>
 
 		<!--spring模板引擎 -->
