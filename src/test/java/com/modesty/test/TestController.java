@@ -22,8 +22,8 @@ import com.modesty.pojo.vo.Book;
 * @author Modesty
 * @Version 2020年4月5日 下午10:24:08
 */
-@RunWith(SpringRunner.class)
-@SpringBootTest
+//@RunWith(SpringRunner.class)
+//@SpringBootTest
 public class TestController {
 //	@Autowired
 //	HelloService helloService;
