@@ -25,40 +25,40 @@ import com.modesty.pojo.vo.Book;
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class TestController {
-	@Autowired
-	HelloService helloService;
-	
-	@Autowired
-	WebApplicationContext wac;
-	
-	MockMvc mockMvc;
-	
-	@Before
-	public void before() {
-		mockMvc = MockMvcBuilders.webAppContextSetup(wac).build();
-	}
-	
-	@Test
-	public void test1() throws Exception {
-		MvcResult mvcResult = mockMvc.perform(
-				MockMvcRequestBuilders.get("/hello").contentType(MediaType.APPLICATION_FORM_URLENCODED).param("name", "Modesty"))
-				.andExpect(MockMvcResultMatchers.status().isOk()).andDo(MockMvcResultHandlers.print()).andReturn();
-		System.out.println(mvcResult.getResponse().getContentAsString());
-	}
-	
-	@Test
-	public void test2() throws Exception {
-		ObjectMapper om = new ObjectMapper();
-		Book book = new Book();
-		book.setAuthor("马谦理");
-		book.setName("无敌");
-		book.setId(1);
-		String s = om.writeValueAsString(book);
-		MvcResult mvcResult = mockMvc.perform(
-				MockMvcRequestBuilders.get("/book").contentType(MediaType.APPLICATION_JSON).content(s))
-				.andExpect(MockMvcResultMatchers.status().isOk()).andReturn();
-		System.out.println(mvcResult.getResponse().getContentAsString());
-	}
+//	@Autowired
+//	HelloService helloService;
+//	
+//	@Autowired
+//	WebApplicationContext wac;
+//	
+//	MockMvc mockMvc;
+//	
+//	@Before
+//	public void before() {
+//		mockMvc = MockMvcBuilders.webAppContextSetup(wac).build();
+//	}
+//	
+//	@Test
+//	public void test1() throws Exception {
+//		MvcResult mvcResult = mockMvc.perform(
+//				MockMvcRequestBuilders.get("/hello").contentType(MediaType.APPLICATION_FORM_URLENCODED).param("name", "Modesty"))
+//				.andExpect(MockMvcResultMatchers.status().isOk()).andDo(MockMvcResultHandlers.print()).andReturn();
+//		System.out.println(mvcResult.getResponse().getContentAsString());
+//	}
+//	
+//	@Test
+//	public void test2() throws Exception {
+//		ObjectMapper om = new ObjectMapper();
+//		Book book = new Book();
+//		book.setAuthor("马谦理");
+//		book.setName("无敌");
+//		book.setId(1);
+//		String s = om.writeValueAsString(book);
+//		MvcResult mvcResult = mockMvc.perform(
+//				MockMvcRequestBuilders.get("/book").contentType(MediaType.APPLICATION_JSON).content(s))
+//				.andExpect(MockMvcResultMatchers.status().isOk()).andReturn();
+//		System.out.println(mvcResult.getResponse().getContentAsString());
+//	}
 }
 
 
