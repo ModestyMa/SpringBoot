@@ -7,6 +7,9 @@ import org.slf4j.LoggerFactory;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
+import com.ctrip.framework.apollo.Config;
+import com.ctrip.framework.apollo.ConfigService;
+
 /**
 * @author Modesty
 * @Version 2020年4月7日 上午12:17:44
@@ -19,6 +22,9 @@ public class MySchedule {
 	@Scheduled(fixedDelay = 5000)				//当前任务结束5s,开启另一个任务
 	public void fixedDelay() {
 		log.info("[MySchedule]fixedDelay:"+new Date());
+		Config appConfig = ConfigService.getAppConfig();
+		String property = appConfig.getProperty("sms.enable", "");
+		System.out.println("Modesty:"+property);
 	}
 	
 	@Scheduled(fixedRate = 10000)				//当前任务执行10s后,开启另一个任务

@@ -6,6 +6,7 @@ import org.apache.activemq.command.ActiveMQQueue;
 import org.springframework.batch.core.configuration.annotation.EnableBatchProcessing;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.context.annotation.Bean;
 import org.springframework.jms.annotation.EnableJms;
 import org.springframework.scheduling.annotation.EnableScheduling;
@@ -23,6 +24,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 @EnableJms
 @EnableScheduling
 @EnableBatchProcessing
+@EnableEurekaClient
 //@EnableAdminServer
 public class SpringStartApplication {
 	public static void main(String[] args) {

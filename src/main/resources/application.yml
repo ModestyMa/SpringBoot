@@ -60,7 +60,22 @@ spring:
     initialize-schema: always
     # 设置batch表的前缀
     table-prefix: csv_batch
-
+app:
+  id: ccb_0001
+  #env: DEV
+apollo:
+  #configService: http://119.3.167.2:8080
+  meta: http://localhost:8080
+  cluster: YQ 
+  bootstrap:
+    enabled: true
+    namespace: application,common_conf.spring-boot-http 
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    service-url:
+       defaultZone: http://localhost:8080/eureka/
 #  mvc:
 #     static-path-pattern:  /static/**    过滤规则
 #  resources:
