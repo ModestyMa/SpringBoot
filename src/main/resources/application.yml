@@ -65,7 +65,7 @@ app:
   #env: DEV
 apollo:
   #configService: http://119.3.167.2:8080
-  meta: http://localhost:8080
+  meta: http://119.3.167.2:8080
   cluster: YQ 
   bootstrap:
     enabled: true
@@ -75,7 +75,7 @@ eureka:
     prefer-ip-address: true
   client:
     service-url:
-       defaultZone: http://localhost:8080/eureka/
+       defaultZone: http://119.3.167.2:8080/eureka/
 #  mvc:
 #     static-path-pattern:  /static/**    过滤规则
 #  resources:
